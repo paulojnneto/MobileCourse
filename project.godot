@@ -15,6 +15,12 @@ run/main_scene="res://menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
+[display]
+
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
+window/handheld/orientation=6
+
 [rendering]
 
 environment/defaults/default_clear_color=Color(0.347156, 0.465757, 1, 1)
