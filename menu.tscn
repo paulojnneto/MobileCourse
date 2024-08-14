@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://bm7qr5drd5m86"]
+[gd_scene load_steps=9 format=3 uid="uid://bm7qr5drd5m86"]
 
+[ext_resource type="Script" path="res://menu.gd" id="1_5j08r"]
 [ext_resource type="FontFile" uid="uid://dgypanq7c21xb" path="res://Font/kenvector_future_thin.ttf" id="1_le52b"]
 [ext_resource type="Texture2D" uid="uid://emenjukii1op" path="res://PNG/blue_button04.png" id="2_m3eq2"]
 [ext_resource type="Texture2D" uid="uid://b4lrrcuhn28l4" path="res://PNG/blue_button05.png" id="3_6nxfa"]
@@ -22,6 +23,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_5j08r")
 
 [node name="PlayButton" type="Button" parent="."]
 layout_mode = 1
@@ -57,3 +59,5 @@ theme_override_fonts/font = ExtResource("1_le52b")
 theme_override_font_sizes/font_size = 125
 text = "CLICKER GAME
 "
+
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
