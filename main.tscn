@@ -92,7 +92,11 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("1_qfwhe")
 theme_override_font_sizes/font_size = 75
-text = "Time left: 0
+text = "Time left: 0 s
 "
 
+[node name="TimeLeftTimer" type="Timer" parent="."]
+autostart = true
+
 [connection signal="pressed" from="IncreaseScoreButton" to="." method="_on_increase_score_button_pressed"]
+[connection signal="timeout" from="TimeLeftTimer" to="." method="_on_time_left_timer_timeout"]
