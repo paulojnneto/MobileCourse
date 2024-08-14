@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://bb7xan43dty65"]
+[gd_scene load_steps=9 format=3 uid="uid://bb7xan43dty65"]
 
 [ext_resource type="FontFile" uid="uid://dgypanq7c21xb" path="res://Font/kenvector_future_thin.ttf" id="1_qfwhe"]
+[ext_resource type="Script" path="res://main.gd" id="1_w8lfw"]
 [ext_resource type="Texture2D" uid="uid://epcbesihjd3p" path="res://PNG/green_button04.png" id="1_weuxi"]
 [ext_resource type="Texture2D" uid="uid://by8mmkoqajlj6" path="res://PNG/green_button05.png" id="2_kvf2l"]
 
@@ -22,6 +23,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_w8lfw")
 
 [node name="IncreaseScoreButton" type="Button" parent="."]
 layout_mode = 1
@@ -92,3 +94,5 @@ theme_override_fonts/font = ExtResource("1_qfwhe")
 theme_override_font_sizes/font_size = 75
 text = "Time left: 0
 "
+
+[connection signal="pressed" from="IncreaseScoreButton" to="." method="_on_increase_score_button_pressed"]
